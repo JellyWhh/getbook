@@ -131,12 +131,31 @@
             android:inputType="number" />
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/bt_set_save"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content" >
+        
+        
+        <Button
+        android:id="@+id/bt_set_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/bt_set_edit" />
+        
+        
+        <Button
+        android:id="@+id/bt_set_save"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/bt_set_save" />
+        
+    </LinearLayout>
+
 
 </LinearLayout>

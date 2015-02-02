@@ -3,15 +3,14 @@
 
     <string name="app_name">GetBook</string>
     <string name="action_settings">Settings</string>
-    
     <string name="tv_login_des">Input username:</string>
     <string name="bt_login">Login</string>
-    
     <string name="tab_home">Home</string>
     <string name="tab_message">Message</string>
     <string name="tab_procedure">Procudure</string>
     <string name="tab_setting">Setting</string>
-    
+
+    <!-- Setting标签页 -->
     <string name="tv_set_des">Priority Setting</string>
     <string name="tv_set_methodChoice">book provided</string>
     <string name="tv_set_library">provided by library</string>
@@ -19,6 +18,11 @@
     <string name="tv_set_shopChoice">bookstore</string>
     <string name="tv_set_campusShop">purchased from CBS</string>
     <string name="tv_set_secondHand">purchased from SHS</string>
+    <string name="bt_set_edit">Edit</string>
     <string name="bt_set_save">Save</string>
+
+    <!-- Message标签页的两个标签 -->
+    <string name="tab_message_unread">New</string>
+    <string name="tab_message_read">History</string>
 
 </resources>

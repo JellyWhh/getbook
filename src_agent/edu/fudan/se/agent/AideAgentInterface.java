@@ -8,5 +8,10 @@ package edu.fudan.se.agent;
  *
  */
 public interface AideAgentInterface {
-
+	
+	public void sendNewTaskMesToExternalAgent(AgentMessage message);
+	public void sendNewTaskMesToSelfAgent(AgentMessage message);
+	
+	public void sendTaskRetToExternalAgent(AgentMessage message);
+	
 }
