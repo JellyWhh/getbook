@@ -24,5 +24,11 @@
     <!-- Message标签页的两个标签 -->
     <string name="tab_message_unread">New</string>
     <string name="tab_message_read">History</string>
+    
+    <!-- Home标签页的文本和按钮 -->
+    <string name="home_description">Get a book</string>
+    <string name="home_input">Input the title of the book:</string>
+    <string name="home_start">Start</string>
+    <string name="home_stop">Stop</string>
 
 </resources>

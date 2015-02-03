@@ -266,6 +266,7 @@ public class GetBookRunnable implements Runnable {
 			aideAgentInterface.sendNewTaskMesToExternalAgent(queryFromCBS);
 			String price = waitQueryFromCBSRet();
 			if (price.equals("")) { // 委托给人查的结果还是没有
+				newProcedureLog("Bookstore does not have the book:" + bookname);
 				// 失败，该进行二手查询了
 				ret = false;
 			} else {// 委托给人查询的结果返回的是价钱
@@ -415,7 +416,7 @@ public class GetBookRunnable implements Runnable {
 						ret = message.getContent();
 					}
 				}
-
+				isFinish = true;
 			}
 
 		}
@@ -440,6 +441,7 @@ public class GetBookRunnable implements Runnable {
 						ret = message.getContent();
 					}
 				}
+				isFinish = true;
 			}
 		}
 		return ret;

@@ -13,6 +13,7 @@ import jade.util.leap.Properties;
 import jade.wrapper.AgentController;
 import jade.wrapper.ControllerException;
 import edu.fudan.se.agent.AideAgent;
+import edu.fudan.se.getbook.MainActivity;
 import edu.fudan.se.getbook.R;
 import android.app.Activity;
 import android.content.ComponentName;
@@ -82,6 +83,12 @@ public class LoginActivity extends Activity {
 				String host = settings.getString("defaultHost", "");
 				String port = settings.getString("defaultPort", "");
 				startChat(nickname, host, port, agentStartupCallback);
+
+				// 跳转到main activity
+				Intent intent = new Intent(LoginActivity.this,
+						MainActivity.class);
+				// intent.putExtra("agentname", nickname);
+				startActivity(intent);
 			}
 		}
 	};

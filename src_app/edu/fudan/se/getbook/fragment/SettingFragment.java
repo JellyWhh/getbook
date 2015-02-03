@@ -13,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * @author whh
@@ -71,16 +72,27 @@ public class SettingFragment extends Fragment {
 				String et_shop = et_set_shop.getText().toString();
 				String et_campusShop = et_set_campusShop.getText().toString();
 				String et_secondHand = et_set_secondHand.getText().toString();
+				
+				try {
+//					Integer.parseInt(et_library);
+//					Integer.parseInt(et_shop);
+//					Integer.parseInt(et_campusShop);
+//					Integer.parseInt(et_secondHand);
+					
+					application.setPriorityLibrary(Integer.parseInt(et_library));
+					application.setPriorityShop(Integer.parseInt(et_shop));
+					application.setPriorityCBS(Integer.parseInt(et_campusShop));
+					application.setPrioritySHS(Integer.parseInt(et_secondHand));
 
-				application.setPriorityLibrary(Integer.parseInt(et_library));
-				application.setPriorityShop(Integer.parseInt(et_shop));
-				application.setPriorityCBS(Integer.parseInt(et_campusShop));
-				application.setPrioritySHS(Integer.parseInt(et_secondHand));
+					et_set_library.setVisibility(View.INVISIBLE);
+					et_set_shop.setVisibility(View.INVISIBLE);
+					et_set_campusShop.setVisibility(View.INVISIBLE);
+					et_set_secondHand.setVisibility(View.INVISIBLE);
+				} catch (Exception e) {
+					Toast.makeText(getActivity(), "input error!", Toast.LENGTH_LONG).show();
+				}
 
-				et_set_library.setVisibility(View.INVISIBLE);
-				et_set_shop.setVisibility(View.INVISIBLE);
-				et_set_campusShop.setVisibility(View.INVISIBLE);
-				et_set_secondHand.setVisibility(View.INVISIBLE);
+				
 
 			}
 		});
